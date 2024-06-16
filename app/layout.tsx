@@ -6,8 +6,8 @@ import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
 	title: {
-		default: "devollox.fun",
-		template: "%s | devollox.fun",
+		default: "Portfolio",
+		template: "%s | Portfolio",
 	},
 	description: "Hi man, I'm an ordinary programmer, I really love astronomy and electrical\n" +
 		"engineering. I can stare into space for hours.",
@@ -15,11 +15,11 @@ export const metadata: Metadata = {
 		title: "devollox.fun",
 		description:
 			"I really love astronomy and electrical engineering",
-		url: "https://devollox.fun",
-		siteName: "devollox.fun",
+		url: "https://devmodel.fun",
+		siteName: "portfolio.fun",
 		images: [
 			{
-				url: "https://devollox.fun/og.png",
+				url: "https://devmodel.fun/og.png",
 				width: 1920,
 				height: 1080,
 			},
