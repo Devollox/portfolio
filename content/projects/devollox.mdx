@@ -6,3 +6,47 @@ url: https://devollox.fun
 date: "2023-05-15"
 published: true
 ---
+
+I spent a lot of my time on this site. I used `Blog` scripts. And also `cmdk` is almost like `Vercel`.
+
+```js
+import React, { useLayoutEffect } from 'react'
+
+import debounce from 'lodash.debounce'
+import Router from 'next/router'
+import nprogress from 'nprogress'
+
+const start = debounce(nprogress.start, 500)
+Router.events.on('routeChangeStart', start)
+Router.events.on('routeChangeComplete', () => {
+  start.cancel()
+  nprogress.done()
+  window.scrollTo(0, 0)
+})
+Router.events.on('routeChangeError', () => {
+  start.cancel()
+  nprogress.done()
+})
+
+import '@styles/global.scss'
+import { ThemeProvider } from 'next-themes'
+import Footer from '@components/footer'
+import Error from '@components/error'
+
+function MyApp({ Component, pageProps }) {
+  useLayoutEffect(() => {
+    document.addEventListener('keydown', function(event) {
+      if (event.ctrlKey && event.key === 'k') {
+        event.preventDefault()
+      }
+    })
+  }, [])
+  return (
+      <ThemeProvider defaultTheme="system">
+        <Component {...pageProps} />
+        <Footer />
+      </ThemeProvider>
+  )
+}
+export default MyApp
+```
