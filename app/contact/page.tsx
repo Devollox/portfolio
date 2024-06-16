@@ -8,10 +8,13 @@ import { Eye } from "lucide-react";
 import {Article} from "@/app/projects/article";
 
 const redis = Redis.fromEnv();
-
 export const revalidate = 60;
-export default async function ProjectsPage() {
 
+export const metadata = {
+	title: 'Contact',
+}
+
+export default async function ProjectsPage() {
 	const sorted = [
 		{
 			"title": "Discord",
