@@ -25,7 +25,7 @@ export const Article: React.FC<Props> = ({ project, views }) => {
 							{new Date(project.date).getFullYear()}
 						</time>
 					) : (
-						<span>soon</span>
+						<span></span>
 					)}</div>
 				</div>
 			</div>
