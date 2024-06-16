@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 		},
 	},
 	twitter: {
-		title: "Chronark",
+		title: "Devollox",
 		card: "summary_large_image",
 	},
 	icons: {
