@@ -6,8 +6,12 @@ import { Article } from "./article";
 import { Redis } from "@upstash/redis";
 
 const redis = Redis.fromEnv();
-
 export const revalidate = 60;
+
+export const metadata = {
+	title: 'Projects',
+}
+
 export default async function ProjectsPage() {
 	const views = (
 		await redis.mget<number[]>(
