@@ -31,7 +31,7 @@ pnpm dev
 ```
 
 
-## Repi Mapper
+## Repo Mapper
 
 ```ts
 ├── app
